@@ -9,3 +9,10 @@ class EDIFICIO(CIUDAD):
         self.A = A
         self.B = B
         self.C = C
+
+class EMPRESA(EDIFICIO):
+    def __init__(self, NY, LA, A, B, C, martin, salim, xing):
+        super().__init__(NY, LA, A, B, C)
+        self.martin = martin
+        self.salim = salim
+        self.xing = xing 
