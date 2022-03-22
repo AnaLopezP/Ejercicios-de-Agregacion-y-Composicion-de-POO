@@ -1,18 +1,24 @@
 
 class Ciudad:
-    def __init__(self, nombre, list_edificios):
-        self.nombre = nombre
-        self.list_edificios = list_edificios
-    
+    edificios = []
+    nombre = ""
+
     def __init__(self, nombre):
         self.nombre = nombre
 
-    def add_edif(edif):
-        list_edificios.append(edif)
+    def add_edif(self, edif):
+        self.edificios.append(edif)
+    
+    def get_edifs(self):
+        return self.edificios
 
 class Edificio:
-    def __init__(self, nombre_edif):
-        self.nombre_edif = nombre_edif
+    nombre = ""
+    def __init__(self, nombre):
+        self.nombre = nombre
+
+    def get_nombre(self):
+        return self.nombre
 
 
 class Empresa:
@@ -40,6 +46,16 @@ la = Ciudad("Los Angeles")
 ny.add_edif(edif_a)
 ny.add_edif(edif_b)
 la.add_edif(edif_c)
+
+
+print(ny.edificios[0].get_nombre())
+edif = ny.get_edifs().pop()
+print(edif)
+print('\n')
+print('\n')
+print('\n')
+print(la.nombre)
+print(la.get_edifs().pop().get_nombre())
 
 
 '''edificaciones = EDIFICIO()
