@@ -1,28 +1,23 @@
-from re import A
-
 
 class CIUDAD:
-    def __init__(self, NY, LA):
-        self.NY = NY
-        self.LA = LA
+    def __init__(self, nombre, list_edificios):
+        self.nombre = nombre
+        self.list_edificios = list_edificios
 
-class EDIFICIO(CIUDAD):
-    def __init__(self, NY, LA, A, B, C):
-        super().__init__(NY, LA)
-        self.A = A
-        self.B = B
-        self.C = C
+class EDIFICIO:
+    def __init__(self, nombre_ciudad):
+        self.nombre_ciudad = nombre_ciudad
 
 
-class EMPRESA(EDIFICIO):
-    def __init__(self, NY, LA, A, B, C, martin, salim, xing):
-        super().__init__(NY, LA, A, B, C)
-        self.martin = martin
-        self.salim = salim
-        self.xing = xing 
+class EMPRESA:
+    def __init__(self, nombre, list_empleados, list_edificios):
+        self.nombre = nombre
+        self.list_empleados = list_empleados
+        self.list_edificios = list_edificios
 
-edificaciones = EDIFICIO()
-ciudades = CIUDAD()
+'''edificaciones = EDIFICIO()
+los_angeles = CIUDAD("Los Angeles")
+nueva_y = CIUDAD("Nueva York")
 trabajo = EMPRESA()
 class destrucc_NY(EMPRESA):
     def __init__(self, NY, LA, A, B, C, martin, salim, xing):
@@ -30,5 +25,4 @@ class destrucc_NY(EMPRESA):
 
     def __del__(self):
         ciudades.remove(self.NY)
-        edificaciones.remove(self.A, self.B)
-        
+        edificaciones.remove(self.A, self.B)'''
