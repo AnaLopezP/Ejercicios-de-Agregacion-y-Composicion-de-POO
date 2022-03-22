@@ -49,7 +49,7 @@ ny.add_edif(edif_a)
 ny.add_edif(edif_b)
 la.add_edif(edif_c)
 
-print("Estas son las ciudades que hay:")
+'''print("Estas son las ciudades que hay:")
 print(ny.nombre)
 print(la.nombre)
 print("Este es el nombre de la empresa:")
@@ -86,5 +86,5 @@ if respuesta == "s":
 elif respuesta == "n":
     print("De acuerdo.")
 else:
-    print("Esa no es una opcion valida")
+    print("Esa no es una opcion valida")'''
 
