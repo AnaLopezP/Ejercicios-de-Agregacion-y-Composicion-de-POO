@@ -1,7 +1,6 @@
 
 class Ciudad:
     
-
     def __init__(self, nombre):
         self.nombre = nombre
         self.edificios = []
@@ -51,24 +50,11 @@ print(ny.nombre)
 print(ny.edificios.pop().get_nombre())
 print(ny.edificios.pop().get_nombre())
 print(la.edificios.pop().get_nombre())
-'''print(ny.edificios[0].get_nombre())
-edif = ny.get_edifs().pop()
-print(edif)
-print('\n')
-print('\n')
-print('\n')
-print(la.nombre)
-print(la.get_edifs().pop().get_nombre())'''
+print(yoohoo.nombre)
+print(yoohoo.list_edificios.pop().get_nombre())
+print(yoohoo.list_edificios.pop().get_nombre())
+print(yoohoo.list_edificios.pop().get_nombre())
+print(yoohoo.list_empleados.pop().nombre)
+print(yoohoo.list_empleados.pop().nombre)
+print(yoohoo.list_empleados.pop().nombre)
 
-
-'''edificaciones = EDIFICIO()
-los_angeles = CIUDAD("Los Angeles")
-nueva_y = CIUDAD("Nueva York")
-trabajo = EMPRESA()
-class destrucc_NY(EMPRESA):
-    def __init__(self, NY, LA, A, B, C, martin, salim, xing):
-        super().__init__(NY, LA, A, B, C, martin, salim, xing)
-
-    def __del__(self):
-        ciudades.remove(self.NY)
-        edificaciones.remove(self.A, self.B)'''
