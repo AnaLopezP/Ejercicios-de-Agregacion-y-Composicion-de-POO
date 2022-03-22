@@ -1,10 +1,10 @@
 
 class Ciudad:
-    edificios = []
-    nombre = ""
+    
 
     def __init__(self, nombre):
         self.nombre = nombre
+        self.edificios = []
 
     def add_edif(self, edif):
         self.edificios.append(edif)
@@ -47,15 +47,18 @@ ny.add_edif(edif_a)
 ny.add_edif(edif_b)
 la.add_edif(edif_c)
 
-
-print(ny.edificios[0].get_nombre())
+print(ny.nombre)
+print(ny.edificios.pop().get_nombre())
+print(ny.edificios.pop().get_nombre())
+print(la.edificios.pop().get_nombre())
+'''print(ny.edificios[0].get_nombre())
 edif = ny.get_edifs().pop()
 print(edif)
 print('\n')
 print('\n')
 print('\n')
 print(la.nombre)
-print(la.get_edifs().pop().get_nombre())
+print(la.get_edifs().pop().get_nombre())'''
 
 
 '''edificaciones = EDIFICIO()
