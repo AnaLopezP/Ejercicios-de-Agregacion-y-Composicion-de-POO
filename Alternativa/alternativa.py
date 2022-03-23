@@ -28,12 +28,25 @@ class Cristal:
         self.ancho = ancho
 
 class Ventana(Cristal):
-    def __init__(self, medidas):
-        self.medidas = medidas
+    def __init_subclass__():
+        return super().__init_subclass__()
+
+    def get_estado(self):
+        return self.estado
+    
+    def set_estado(self, estado):
+        self.estado = estado
         
 
-class Pared(Cristal): pass
+class Pared(Cristal): 
+    def __init_subclass__():
+        return super().__init_subclass__()
 
+    def get_opacidad(self):
+        return self.opacidad
+    
+    def set_estado(self, opacidad):
+        self.opacidad = opacidad
 
 
 
