@@ -6,7 +6,7 @@ class Cristal:
     def __init__(self, alto, ancho):
         self.alto = alto
         self.ancho = ancho
-        self.superficie = self.alto * self.ancho
+        self.superficie = int(self.alto) * int(self.ancho)
 
     def get_superficie(self):
         return self.alto*self.ancho
@@ -36,18 +36,13 @@ class Ventana(Cristal):
         
     def get_proteccion(self):
         return self.proteccion
-
-    def get_estado(self):
-        return self.estado
     
-    def set_estado(self, estado):
-        self.estado = estado
         
     def set_proteccion(self, proteccion):
         self.proteccion = proteccion
 
     def __str__(self) -> str:
-        cadena = super().__str__() + " estado = " + str(self.estado) + " proteccion = " + str(self.proteccion)
+        cadena = super().__str__()  + " proteccion = " + str(self.proteccion)
         return cadena
 
 class Pared(Cristal): 
@@ -64,21 +59,6 @@ class Pared(Cristal):
         cadena = super().__str__() + " opacidad = " + str(self.opacidad)
         return cadena
 
-ventana = Ventana(6, 6)
-print(ventana.get_superficie())
-ventana.set_alto(5)
-ventana.set_ancho(5)
-ventana.set_estado("abierta")
-ventana.set_proteccion("estor")
-print(ventana)
-#print(ventana.get_superficie())
-
-pared = Pared(3, 6)
-print(pared.get_superficie())
-pared.set_alto(8)
-pared.set_ancho(5)
-pared.set_opacidad("translucido")
-print(pared)
 
 
 #funcion que mira la proteccion que quiere en las ventanas
@@ -94,7 +74,13 @@ def proteccion():
             print("tiene que ser una opcion de la lista")
             proteccion()
         else:
-            print("gracias. Siguiente paso")
+            print("gracias. Siguiente paso")    
     else:
         raise Exception("No se ha escogido ninguna proteccion")
+    print("Eliga la opacidad de la pared")
+    opciones = ["opaco", "translucido", "transparente"]
+    print(opciones)
+    cual_es_p = input()
+
+    return cual_es, cual_es_p
 
