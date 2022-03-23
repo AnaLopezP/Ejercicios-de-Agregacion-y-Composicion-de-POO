@@ -10,7 +10,6 @@ class Cristal:
 
     def get_superficie(self):
         return self.alto*self.ancho
-        #return self.superficie
 
     def get_ancho(self):
         return self.ancho
