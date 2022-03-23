@@ -7,14 +7,15 @@ class Cristal:
         self.ancho = ancho
         self.superficie = alto * ancho
     
-    def __init__(self):
+    '''def __init__(self):
         self.alto = 0
         self.ancho = 0
-        self.superficie = 0
+        self.superficie = 0'''
 
     def get_superficie(self):
-        return self.superficie
-    
+        return self.alto*self.ancho
+        #return self.superficie
+
     def get_ancho(self):
         return self.ancho
 
@@ -28,8 +29,8 @@ class Cristal:
         self.ancho = ancho
 
 class Ventana(Cristal):
-    def __init_subclass__():
-        return super().__init_subclass__()
+    def __init_subclass__(self, alto, ancho):
+        return super().__init_subclass__(self, alto, ancho)
 
     def get_estado(self):
         return self.estado
@@ -48,6 +49,11 @@ class Pared(Cristal):
     def set_estado(self, opacidad):
         self.opacidad = opacidad
 
+ventana = Ventana(6, 6)
+print(ventana.get_superficie())
+ventana.set_alto(5)
+ventana.set_ancho(5)
+print(ventana.get_superficie())
 
 
 
@@ -67,7 +73,7 @@ class Pared(Cristal):
 
 
 #funcion que mira la proteccion que quiere en las ventanas
-def proteccion():
+'''def proteccion():
     print("¿Le gutaria tener proteccion en las ventanas? s/n")
     respuesta = input()
     if respuesta == "s":
@@ -81,5 +87,5 @@ def proteccion():
         else:
             print("gracias. Siguiente paso")
     else:
-        raise Exception("No se ha escogido ninguna proteccion")
+        raise Exception("No se ha escogido ninguna proteccion")'''
 
