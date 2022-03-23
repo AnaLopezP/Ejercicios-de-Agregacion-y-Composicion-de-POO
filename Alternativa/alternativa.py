@@ -2,7 +2,9 @@ class Cristal:
     def __init__(self, medidas):
         self.medidas = medidas
         medidas = []
-
+    def superficie_acristalada(self, medidas):
+        superficie = sum(medidas)
+        return superficie
 
 #funcion que mira la proteccion que quiere en las ventanas
 def proteccion():

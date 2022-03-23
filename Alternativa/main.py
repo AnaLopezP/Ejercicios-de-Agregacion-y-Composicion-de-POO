@@ -1,33 +1,24 @@
 import alternativa
 
 if __name__ == "__main__":
-    #calculo de las ventanas
-    alternativa.proteccion()
-    print("introduce la medida de la superficie de las ventanas")
-    print("ventana de la pared norte:")
+    print("¿Que superficie quiere para las ventanas?")
+    print("Ventana norte:")
     v_n = input()
-    print("ventana de la pared sur:") 
+    print("Ventana sur:")
     v_s = input()
-    print("ventana de la pared este:")
+    print("Ventana este:")
     v_e = input()
-    print("ventana de la pared oeste:")
+    print("Ventana oeste:")
     v_o = input()
+    print("¿Que superficie quiere para las paredes?")
+    print("Pared norte:")
+    p_n = input()
+    print("Pared sur:")
+    p_s = input()
+    print("Pared este:")
+    p_e = input()
+    print("Pared oeste:")
+    p_o = input()
+    alternativa.Cristal.medidas.apeend(v_n, v_s, v_e, v_o, p_n, p_s, p_e, p_o)
 
-    casa = alternativa.CASA(v_n, v_s, v_e, v_o)
-    suma = casa.superficie_acristalada()
-    print("Esta es la superficie total de las ventanas: " + str(suma))
-
-    #calculo de las paredes cortina
-    print("introduce la medida de la superficie de las paredes cortina")
-    print("cortina norte:")
-    c_n = input()
-    print("cortina sur:") 
-    c_s = input()
-    print("cortina este:")
-    c_e = input()
-    print("cortina oeste:")
-    c_o = input()
-
-    paredes_cortina = alternativa.CASA(c_n, c_s, c_e, c_o)
-    suma = paredes_cortina.superficie_acristalada()
-    print("Esta es la superficie total de las paredes cortina: " + str(suma))
+    
